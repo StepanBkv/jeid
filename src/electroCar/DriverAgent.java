@@ -1,11 +1,13 @@
 package electroCar;
+
 import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.*;
+import jade.core.behaviours.OneShotBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
-import java.util.ArrayList;
-import java.util.List;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -15,7 +17,7 @@ public class DriverAgent extends Agent {
     private MessageTemplate mt;
 
     protected void setup() {
-        System.out.println("Hello! Order - agent "+getAID().getName() +"is ready.");
+        System.out.println("Hello! Driver - agent "+getAID().getName() +"is ready.");
         myGui = new DriverGui(this);
         myGui.showGUI();
         myGui.addKeyListener(new KeyListener() {//описание обработчика клавиши
